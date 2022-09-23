@@ -1,0 +1,257 @@
+@font-face {
+    font-family: "pixel";
+    src: url("fonts/8bitoperator.ttf");
+}
+@import url('https://fonts.googleapis.com/css2?family=Dangrek&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'pixel', cursive;
+    color: #1c1c1c;
+}
+
+//PantallaDeCarga
+body{
+    position: relative;
+
+.pantallaDeCarga__container{
+    height: 100vh;
+    width: 100vw;
+    background-color: #F9F9F9;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    z-index: -1;
+}
+
+.pantallaDeCargaOff{
+    transition: opacity .5s;
+    opacity: 0;
+    z-index: -1;
+}
+
+.cargando__container{
+    position: relative;
+    bottom: 5vh;
+}
+
+.puntos__container{
+    position: relative;
+    height: 10vh;
+    width: 10vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.punto{
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: black;
+    position: relative;
+    margin: 6px;
+    
+}
+
+.punto-rojo{
+    background-color:#FF4040 ;
+    animation:jumpingDot .5s ease-in-out infinite alternate;
+
+}
+
+.punto-azul{
+    background-color: #40D3FF;
+    animation:jumpingDot .5s ease-in-out infinite alternate;
+    animation-delay: .1s;
+}
+
+.punto-amarillo{
+    background-color: #FFEE40;
+    animation:jumpingDot .5s ease-in-out infinite alternate;
+    animation-delay: .2s;
+}
+
+@keyframes jumpingDot{
+    from{
+        transform: translateY(0px);
+    }
+
+    to{
+        transform: translateY(-30px);
+    }
+}
+//PantallaDeCarga
+#header{
+    height:12vh;
+    background-color: #1c1c1c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    .cuentaRegresiva__container{
+        height: 100%;
+        width: 20vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .cuentaRegresiva{
+            color:#F9F9F9;
+        }
+    }
+
+}
+#main{
+    height: 76vh;
+    background-color: #F6F6F6;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows:1fr ;
+    position: relative;
+
+    .cuentaAtras{
+     position: absolute;
+
+        
+        
+    }
+
+    .start__container{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        border: solid #1c1c1c 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50px;
+        width: 100px;
+        background-color: #F6F6F6;
+        cursor: pointer;
+
+        .cuentaAtras{
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+           
+
+            .numbers{
+                font-size: 10rem;
+                color: red; 
+            }
+
+            .numberHide{
+                opacity: 0;
+            }
+                 
+           }
+
+        &:hover .start{
+            color:red ;
+        }
+
+
+        .start{
+            font-size: 1rem;
+        }
+    }
+
+    .ladoAzul__container{
+        background-color:#B2E8FF ;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 20% 80%;
+
+        .ladoAzul__title-container{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            width: 100%;
+        }
+
+        .teclaAzul__container{
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            flex-flow: column;
+
+            .teclaAzul{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                height: 50vh;
+                width: 28vw;
+                
+
+                h3{
+                    font-size: 10rem;
+                }
+
+                
+                
+            }
+
+        }
+
+        }
+
+        .ladoRojo__container{
+            background-color:#FFB2B2 ;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 20% 80%;
+        .ladoRojo__title{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            width: 100%;
+            
+        }
+
+        .teclaRojo__container{
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            flex-flow: column;
+
+            .teclaRojo{
+                display: flex;
+                height: 50vh;
+                width: 30vw;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+
+                h3{
+                    font-size: 10rem;
+                }
+                
+                
+            }
+
+        }
+    }
+
+    }
+
+    
+
+    
+
+#footer{
+    height: 12vh;
+    background-color: #1c1c1c;
+}
+
+}

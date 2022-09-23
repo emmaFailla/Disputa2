@@ -1,0 +1,350 @@
+@import url("https://fonts.googleapis.com/css2?family=Dangrek&display=swap");
+@font-face {
+  font-family: "pixel";
+  src: url("fonts/8bitoperator.ttf");
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'pixel', cursive;
+  color: #1c1c1c;
+}
+
+body {
+  position: relative;
+}
+
+body .pantallaDeCarga__container {
+  height: 100vh;
+  width: 100vw;
+  background-color: #F9F9F9;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  z-index: -1;
+}
+
+body .pantallaDeCargaOff {
+  -webkit-transition: opacity .5s;
+  transition: opacity .5s;
+  opacity: 0;
+  z-index: -1;
+}
+
+body .cargando__container {
+  position: relative;
+  bottom: 5vh;
+}
+
+body .puntos__container {
+  position: relative;
+  height: 10vh;
+  width: 10vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body .punto {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background-color: black;
+  position: relative;
+  margin: 6px;
+}
+
+body .punto-rojo {
+  background-color: #FF4040;
+  -webkit-animation: jumpingDot .5s ease-in-out infinite alternate;
+          animation: jumpingDot .5s ease-in-out infinite alternate;
+}
+
+body .punto-azul {
+  background-color: #40D3FF;
+  -webkit-animation: jumpingDot .5s ease-in-out infinite alternate;
+          animation: jumpingDot .5s ease-in-out infinite alternate;
+  -webkit-animation-delay: .1s;
+          animation-delay: .1s;
+}
+
+body .punto-amarillo {
+  background-color: #FFEE40;
+  -webkit-animation: jumpingDot .5s ease-in-out infinite alternate;
+          animation: jumpingDot .5s ease-in-out infinite alternate;
+  -webkit-animation-delay: .2s;
+          animation-delay: .2s;
+}
+
+@-webkit-keyframes jumpingDot {
+  from {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  to {
+    -webkit-transform: translateY(-30px);
+            transform: translateY(-30px);
+  }
+}
+
+@keyframes jumpingDot {
+  from {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  to {
+    -webkit-transform: translateY(-30px);
+            transform: translateY(-30px);
+  }
+}
+
+body #header {
+  height: 12vh;
+  background-color: #1c1c1c;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body #header .cuentaRegresiva__container {
+  height: 100%;
+  width: 20vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body #header .cuentaRegresiva__container .cuentaRegresiva {
+  color: #F9F9F9;
+}
+
+body #main {
+  height: 76vh;
+  background-color: #F6F6F6;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+  position: relative;
+}
+
+body #main .cuentaAtras {
+  position: absolute;
+}
+
+body #main .start__container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  border: solid #1c1c1c 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 50px;
+  width: 100px;
+  background-color: #F6F6F6;
+  cursor: pointer;
+}
+
+body #main .start__container .cuentaAtras {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body #main .start__container .cuentaAtras .numbers {
+  font-size: 10rem;
+  color: red;
+}
+
+body #main .start__container .cuentaAtras .numberHide {
+  opacity: 0;
+}
+
+body #main .start__container:hover .start {
+  color: red;
+}
+
+body #main .start__container .start {
+  font-size: 1rem;
+}
+
+body #main .ladoAzul__container {
+  background-color: #B2E8FF;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: 20% 80%;
+      grid-template-rows: 20% 80%;
+}
+
+body #main .ladoAzul__container .ladoAzul__title-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+body #main .ladoAzul__container .teclaAzul__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+}
+
+body #main .ladoAzul__container .teclaAzul__container .teclaAzul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 50vh;
+  width: 28vw;
+}
+
+body #main .ladoAzul__container .teclaAzul__container .teclaAzul h3 {
+  font-size: 10rem;
+}
+
+body #main .ladoRojo__container {
+  background-color: #FFB2B2;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: 20% 80%;
+      grid-template-rows: 20% 80%;
+}
+
+body #main .ladoRojo__container .ladoRojo__title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+body #main .ladoRojo__container .teclaRojo__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+}
+
+body #main .ladoRojo__container .teclaRojo__container .teclaRojo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 50vh;
+  width: 30vw;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body #main .ladoRojo__container .teclaRojo__container .teclaRojo h3 {
+  font-size: 10rem;
+}
+
+body #footer {
+  height: 12vh;
+  background-color: #1c1c1c;
+}
+/*# sourceMappingURL=estilos.css.map */
